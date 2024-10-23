@@ -1,26 +1,24 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    background: "hsl(0 0% 100%)",
+    foreground: "hsl(240 10% 3.9%)",
+    card: "hsl(0 0% 100%)",
+    "card-foreground": "hsl(240 10% 3.9%",
+    popover: "hsl(0 0% 100%)",
+    "popover-foreground": "hsl(240 10% 3.9%)",
+    primary: "hsl(142.1 76.2% 36.3%)",
+    "primary-foreground": "hsl(355.7 100% 97.3%)",
+    secondary: "hsl(240 4.8% 95.9%)",
+    "secondary-foreground": "hsl(240 5.9% 10%)",
+    muted: "hsl(240 4.8% 95.9%)",
+    "muted-foreground": "hsl(240 3.8% 46.1%)",
+    accent: "hsl(240 4.8% 95.9%)",
+    " accent-foreground": "hsl(240 5.9% 10%)",
+    destructive: "hsl(0 84.2% 60.2%)",
+    "destructive-foreground": "hsl(0 0% 98%)",
+    border: "hsl(240 5.9% 90%)",
+    input: "hsl(240 5.9% 90%)",
+    ring: "hsl(142.1 76.2% 36.3%)",
+    radius: "hsl(1rem)",
   },
 };
