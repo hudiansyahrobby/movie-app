@@ -1,39 +1,23 @@
+import { SimpleCard } from "@/components/ui/Card/SimpleCard";
 import React from "react";
-import { Image, ScrollView, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 
 interface MovieListProps {}
 
 const MovieList: React.FC<MovieListProps> = ({}) => {
   return (
     <ScrollView horizontal contentContainerClassName="gap-3">
-      <View>
-        <Image
-          source={require("../../assets/images/avenger.jpg")}
-          className="w-48 h-72 rounded-lg"
-          resizeMode="cover"
-        />
-      </View>
-      <View>
-        <Image
-          source={require("../../assets/images/avenger.jpg")}
-          className="w-48 h-72 rounded-lg"
-          resizeMode="cover"
-        />
-      </View>
-      <View>
-        <Image
-          source={require("../../assets/images/avenger.jpg")}
-          className="w-48 h-72 rounded-lg"
-          resizeMode="cover"
-        />
-      </View>
-      <View>
-        <Image
-          source={require("../../assets/images/avenger.jpg")}
-          className="w-48 h-72 rounded-lg"
-          resizeMode="cover"
-        />
-      </View>
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
+        return (
+          <SimpleCard
+            title="Wonder Woman (1984)"
+            description="Des 16, 2020"
+            image={{
+              source: require("../../assets/images/avenger.jpg"),
+            }}
+          />
+        );
+      })}
     </ScrollView>
   );
 };

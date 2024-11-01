@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 import { cn } from "@/lib/utils";
 
@@ -6,19 +6,14 @@ function Card({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<typeof View>) {
-  return (
-    <View
-      className={cn("rounded-xl border border-border", className)}
-      {...props}
-    />
-  );
+  return <View className={cn("rounded-xl border", className)} {...props} />;
 }
 
 function CardHeader({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<typeof View>) {
-  return <View className={cn("p-4", className)} {...props} />;
+  return <View className={cn(className)} {...props} />;
 }
 
 function CardTitle({
@@ -28,9 +23,22 @@ function CardTitle({
   return (
     <Text
       className={cn(
-        "text-2xl font-semibold tracking-tight text-primary",
+        "text-lg font-semibold tracking-tight text-primary",
         className
       )}
+      {...props}
+    />
+  );
+}
+
+function CardImage({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<typeof Image>) {
+  return (
+    <Image
+      className={cn("w-48 h-72 rounded-lg", className)}
+      resizeMode="cover"
       {...props}
     />
   );
@@ -67,52 +75,12 @@ function CardFooter({
   );
 }
 
-interface SimpleCardProps {
-  className?: string;
-  title?: string;
-  description?: string;
-  content?: string;
-  footer?: string;
-}
-function SimpleCard({
-  className,
-  title,
-  description,
-  content,
-  footer,
-}: SimpleCardProps) {
-  return (
-    <Card className={className}>
-      <CardHeader>
-        {title && (
-          <Text className="text-2xl font-semibold tracking-tight text-primary">
-            {title}
-          </Text>
-        )}
-        {description && (
-          <Text className="text-sm text-muted-foreground">{description}</Text>
-        )}
-      </CardHeader>
-      {content && (
-        <CardContent>
-          <Text className="text-base text-primary">{content}</Text>
-        </CardContent>
-      )}
-      {footer && (
-        <CardFooter>
-          <Text className="text-sm text-muted-foreground">{footer}</Text>
-        </CardFooter>
-      )}
-    </Card>
-  );
-}
-
 export {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardImage,
   CardContent,
   CardFooter,
-  SimpleCard,
 };
