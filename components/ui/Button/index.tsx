@@ -3,6 +3,26 @@ import { Text, TouchableOpacity } from "react-native";
 
 import { cn } from "@/lib/utils";
 
+/**
+ * Defines the button variants using the `cva` utility.
+ *
+ * The button has the following variants:
+ * - `variant`: Determines the button's color and style.
+ *   - `default`: Applies the primary background color.
+ *   - `secondary`: Applies the secondary background color.
+ *   - `destructive`: Applies the destructive background color.
+ *   - `ghost`: Applies a slate background color.
+ *   - `link`: Applies primary text color with an underline offset.
+ *
+ * - `size`: Determines the button's size.
+ *   - `default`: Sets the height to 10 and padding to 4.
+ *   - `sm`: Sets the height to 8 and padding to 2.
+ *   - `lg`: Sets the height to 12 and padding to 8.
+ *
+ * The default variants are:
+ * - `variant`: `default`
+ * - `size`: `default`
+ */
 const buttonVariants = cva(
   "flex flex-row items-center justify-center rounded-md",
   {
@@ -27,6 +47,26 @@ const buttonVariants = cva(
   }
 );
 
+/**
+ * Generates a set of class names for button text variants using the `cva` utility.
+ *
+ * The button text has the following variants:
+ * - `variant`: Determines the button text's color and style.
+ *   - `default`: Applies the primary foreground color.
+ *   - `secondary`: Applies the secondary foreground color.
+ *   - `destructive`: Applies the destructive foreground color.
+ *   - `ghost`: Applies the primary foreground color.
+ *   - `link`: Applies primary foreground color with an underline.
+ *
+ * - `size`: Determines the button text's size.
+ *   - `default`: Sets the text size to base.
+ *   - `sm`: Sets the text size to small.
+ *   - `lg`: Sets the text size to extra-large.
+ *
+ * The default variants are:
+ * - `variant`: `default`
+ * - `size`: `default`
+ */
 const buttonTextVariants = cva("text-center font-medium", {
   variants: {
     variant: {

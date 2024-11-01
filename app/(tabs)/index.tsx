@@ -1,28 +1,21 @@
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Alert, View } from "react-native";
+import MovieCategoryList from "@/features/MovieCategoryList";
+import MovieHeroSlide from "@/features/MovieHeroSlide";
+import MovieList from "@/features/MovieList";
+import * as React from "react";
+import { View } from "react-native";
 
-export default function HomeScreen() {
+import { SafeAreaView } from "react-native-safe-area-context";
+
+function App() {
   return (
-    <View className="mt-10">
-      <Badge label="hello" variant="destructive" />
-      <Badge label="hello" variant="default" />
-      <Badge label="hello" variant="secondary" />
-      <Badge label="hello" variant="success" />
-
-      <View className="flex flex-row gap-3">
-        <Button label="Button" onPress={() => Alert.alert("Pressed 1")} />
-        <Button
-          label="Button"
-          variant="secondary"
-          onPress={() => Alert.alert("Pressed 2")}
-        />
-        <Button
-          label="Button"
-          variant="destructive"
-          onPress={() => Alert.alert("Pressed 3")}
-        />
+    <SafeAreaView>
+      <MovieHeroSlide />
+      <View className="mt-64 flex gap-3 px-4">
+        <MovieCategoryList />
+        <MovieList />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
+
+export default App;
