@@ -1,6 +1,6 @@
 import { SimpleCard } from "@/components/ui/Card/SimpleCard";
 import React from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { ScrollView } from "react-native";
 
 interface MovieListProps {}
 
