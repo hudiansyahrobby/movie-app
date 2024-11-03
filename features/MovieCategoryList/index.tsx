@@ -8,7 +8,7 @@ const MovieCategoryList: React.FC<MovieCategoryListProps> = ({}) => {
   return (
     <View className="flex gap-4">
       <View className="flex justify-between flex-row items-center">
-        <Text className="text-white">Categories</Text>
+        <Text className="font-bold text-2xl text-white">Categories</Text>
         <Text className="text-white">View All</Text>
       </View>
       <ScrollView horizontal contentContainerClassName="gap-2">
